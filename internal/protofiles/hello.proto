@@ -1,0 +1,17 @@
+
+syntax = "proto3";
+
+option go_package = "./internal/controllers";
+
+service Tester {
+  rpc Test (TestRequest) returns (TestResponse) {}
+}
+
+message TestResponse {
+  string response = 1;
+}
+
+message TestRequest {
+  string request = 1;
+}
+
